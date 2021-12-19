@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  app:
+    image: node:14-alpine
+    environment:
+      - RATE_LIMIT=100      
+      - REDIS_STRING=redis://redis
+    ports:
+      - 3000:3000
+    depends_on:
+      - redis
+    links:
+      - redis:redis
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: sh -c "npm install --production
+              && npm start"
+
+  redis:
+    image: redis

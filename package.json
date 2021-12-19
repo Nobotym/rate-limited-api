@@ -1,0 +1,28 @@
+{
+  "name": "rate-limited-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nobotym/rate-limited-api.git"
+  },
+  "author": "Eugeniy Lykov",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Nobotym/rate-limited-api/issues"
+  },
+  "homepage": "https://github.com/Nobotym/rate-limited-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "middleware-async": "^1.3.2",
+    "redis": "^4.0.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
